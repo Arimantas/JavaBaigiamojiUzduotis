@@ -1,13 +1,9 @@
 package com.company;
 
-import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 // Sukurti lentele kuri leistu vartotojui pasirinki duomenis
-// 1 - prideti, 2 - atimti ar 3 - atvaizduoti abiejose lentelese, ar 4 - importuoti duomenis is tekstinio failo
-// .. programa turi parodyti visas masinas su bauda, bei rasti masinas kurio negalejo pasiekti baudos greicio
-
 
 public class Main {
 
@@ -17,6 +13,7 @@ public class Main {
         InsertAuto auto = new InsertAuto();
         NuskaitymasIsFailoISarasa isTeksto = new NuskaitymasIsFailoISarasa();
         Scanner sc = new Scanner(System.in);
+
         while (true) {
             programa.rodykMeniu();
             String veiksmas = sc.nextLine();
@@ -91,9 +88,7 @@ public class Main {
                     break;
             }
         }
-
     }
-
 
     public void rodykMeniu() {
         System.out.println("--------------------------------------------------");

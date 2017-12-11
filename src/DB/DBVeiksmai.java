@@ -15,9 +15,7 @@ public class DBVeiksmai {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
         prisijunkPrieDB();
-
     }
 
     // gauti connection
@@ -53,11 +51,9 @@ public class DBVeiksmai {
                 }
                 System.out.print("\n");
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     // grazink resultSet
@@ -92,31 +88,10 @@ public class DBVeiksmai {
                         svariUzklausa.setDouble(i, (double) parameters[i - 1]);
                         break;
                 }
-
             }
             svariUzklausa.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
-/* public int duokStudentoID(String name, String surname) {
-int rezultatas = -1;
-try {
-PreparedStatement statement = _connection.prepareStatement(
-"SELECT * FROM `students` WHERE `name` = ? AND `surname` = ?"
-);
-statement.setString(1, name);
-statement.setString(2, surname);
-ResultSet resultSet = statement.executeQuery();
-if (resultSet.next()) {
-rezultatas = resultSet.getInt("id");
-}
-} catch (SQLException e) {
-e.printStackTrace();
-}
-
-return rezultatas;
-}
-*/
 }
